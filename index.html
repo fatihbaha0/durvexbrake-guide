@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DURVEX Brake Change Guide</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="qr-section">
-    <h2 class="qr-title">Scan to Learn – DURVEX Brake Change Guide</h2>
-    <div class="qr-container">
-      <div class="qr-card">
-        <img src="images/durvex_qr_logo.png" alt="DURVEX QR with logo">
-        <p>Premium Guide Access</p>
-      </div>
-      <div class="qr-card">
-        <img src="images/durvex_qr_clean.png" alt="Clean DURVEX QR">
-        <p>Quick Scan Mode</p>
-      </div>
+
+  <div id="loader">
+    <div class="logo">DURVEX</div>
+    <p>Brake System Initializing...</p>
+  </div>
+
+  <button id="backBtn" onclick="prevStep()">← Back</button>
+
+  <section id="step1" class="active" style="background-image: url('assets/images/step1_prepare.jpg');">
+    <div class="content">
+      <h1>STEP 1 — PREPARE TOOLS</h1>
+      <p>Gather your tools — a jack, wrench, and gloves. Safety first.</p>
+      <button onclick="nextStep()">Next →</button>
     </div>
   </section>
+
+  <section id="step2" style="background-image: url('assets/images/step2_remove.jpg');">
+    <div class="content">
+      <h1>STEP 2 — REMOVE WHEEL</h1>
+      <p>Loosen the bolts evenly to prevent rotor stress. Ensure the vehicle is stable.</p>
+      <button onclick="nextStep()">Next →</button>
+    </div>
+  </section>
+
+  <section id="step3" style="background-image: url('assets/images/step3_replace.jpg');">
+    <div class="content">
+      <h1>STEP 3 — REPLACE PADS</h1>
+      <p>Remove old pads carefully. Install new DURVEX pads firmly.</p>
+      <button onclick="nextStep()">Next →</button>
+    </div>
+  </section>
+
+  <section id="step4" style="background-image: url('assets/images/step4_test.jpg');">
+    <div class="content">
+      <h1>STEP 4 — REINSTALL & TEST</h1>
+      <p>Reinstall the wheel and test gently to ensure smooth braking.</p>
+      <button onclick="nextStep()">Next →</button>
+    </div>
+  </section>
+
+  <section id="step5" style="background-image: url('assets/images/step5_finish.jpg');">
+    <div class="content">
+      <h1>STEP 5 — CHECK DURVEX PERFORMANCE</h1>
+      <p>Enjoy safer and smoother braking with DURVEX pads. Drive confidently.</p>
+      <button onclick="restart()">Restart ↺</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 DURVEX Brake Systems — Global Quality. Trusted Performance.
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
